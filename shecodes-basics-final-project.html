@@ -167,10 +167,15 @@ class="name"
 </div>
 <script>
  function shop() {
-    let name = prompt("What is your name?");
-    let email = prompt("What is your email address?");
+    let firstName = prompt("What is your first name?");
+    let country = prompt("What country are you from?");
 
-    alert("Thank you " + name + "!😊 We'll be in touch by email. Meanwhile, shop your favorite outfits from Kenyan brands!");
+   if (country === "Kenya" || country === "Tanzania") {
+      alert("Karibu " + firstName + "!😊 Shop your favorite outfits from Kenyan brands. Asante!");
+   } else {
+     alert("Welcome " + firstName + "!😊 Shop your favorite outfits from Kenyan brands. Thank you!");
+   }
+
   }
   let shopButton = document.querySelector("button");
   shopButton.addEventListener("click", shop);
